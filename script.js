@@ -3,16 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const wordsParent = document.querySelector('.dictionary-container');
     const plusBtn = document.querySelector('.plus-btn');
     const wordInput = document.querySelector('.add-word');
-    const backBtn = document.querySelector('.back-btn');
+    const backMenuBtn = document.querySelector('#back-to-menu');
     const importBtn = document.querySelector('.import-btn');
+    const backMainBtn = document.querySelector('#back-to-main');
     const exportBtn = document.querySelector('.export-btn');
 
     // Add and remove words
 
-    plusBtn.addEventListener('click', (e) => {
+    /*plusBtn.addEventListener('click', (e) => {
         e.preventDefault();
         if (wordInput.value != '') {
-            console.log('ok');
             const wordBox = document.createElement('div');
             wordBox.classList.add('logField', 'word');
             wordBox.textContent = wordInput.value;
@@ -35,10 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('ne ok');
         }
     });
-
+   */
     // Bar buttons
 
-    backBtn.addEventListener('click', () => {
+    backMenuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         window.location.href = 'menu.html';
+    });
+
+    backMainBtn.addEventListener('click', (e) => {
+        //e.preventDefault();
+        console.log('klklklkl');
+        //window.location.href = 'index.html';
     });
 });
